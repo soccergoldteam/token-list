@@ -1,0 +1,38 @@
+{
+  "name": "@soccergoldteam/token-list",
+  "version": "1.0.0",
+  "description": "◦ The SoccerGold default token list",
+  "main": "build/token-list.json",
+  "scripts": {
+    "test": "mocha",
+    "build": "rimraf build && mkdir -p build && node src/write.js > build/token-list.json",
+    "prepublishOnly": "npm test && npm run build"
+  },
+  "files": [
+    "build/token-list.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soccergoldteam/token-list.git"
+  },
+  "keywords": [
+    "soccergold",
+    "default",
+    "token",
+    "list"
+  ],
+  "author": "Odon",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/soccergoldteam/token-list/issues"
+  },
+  "homepage": "https://github.com/soccergoldteam/token-list#readme",
+  "devDependencies": {
+    "@ethersproject/address": "^5.0.2",
+    "@uniswap/token-lists": "^1.0.0-beta.8",
+    "ajv": "^6.12.3",
+    "chai": "^4.2.0",
+    "mocha": "^8.0.1",
+    "rimraf": "^3.0.2"
+  }
+}
